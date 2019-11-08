@@ -1,6 +1,6 @@
 <?php 
 include_once "common/base.php";
-$pageTitle = "YUHSG Schedule";
+$pageTitle = "ClassPeriods Tested";
 include_once "common/header.php"; 
 ?>
   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

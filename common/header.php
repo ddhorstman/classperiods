@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
     <meta http-equiv="refresh" content="43200">
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <title> ClassPeriods<?/*php echo $pageTitle*/ ?> </title>
+    <title><?php echo $pageTitle ?></title>
    <link rel="stylesheet" type="text/css" href="style.css">
    <script src = "js/menu.js"></script>
 <link rel="icon" 

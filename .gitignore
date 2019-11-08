@@ -1,7 +1,7 @@
 vendor
 vendor/**
 composer*
-base.php
-/common/base.php
+common/inc/constants.inc.php
 calendar.php
 *.sql
+id_rsa_DDH
