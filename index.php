@@ -1,6 +1,6 @@
 <?php 
 include_once "common/base.php";
-$pageTitle = "ClassPeriods | ".SUBDOMAIN;
+$pageTitle = "ClassPeriods | ".strtoupper(SUBDOMAIN);
 include_once "common/header.php"; 
 ?>
   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
