@@ -9,7 +9,7 @@ require_once 'vendor/autoload.php';
 // init configuration
 $clientID = '941100738123-9p7co0u26h9o28ab8ft3e6is4dqjij21.apps.googleusercontent.com';
 $clientSecret = 'qK5XDU5KKBSlZe8z8tkQz_fp';
-$redirectUri = 'https://yuhsgschedule.com/gauth.php';
+$redirectUri = 'https://'.SUBDOMAIN.'.classperiods.com/gauth.php';
   
 // create Client Request to access Google API
 $client = new Google_Client();
