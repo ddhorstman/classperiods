@@ -294,4 +294,3 @@ echo "var schedule = $json_bells;</script>";
 <div id="calendarWrapper"></div>
 </div>
 <?php include_once "common/sidebar.php"; ?>
-//Testcomment
