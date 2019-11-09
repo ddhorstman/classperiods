@@ -48,6 +48,39 @@
       die($e->getMessage());
     }
   }
+  public function getBellScheduleNames(){
+    $sql = "SELECT BellScheduleName, AlternateName
+            FROM bell_schedules";
+    try{
+      $stmt = $this->_db->prepare($sql);
+      $stmt->execute();
+      $result = array();
+      $result[] = ["delete","No Classes"];
+      while($row = $stmt->fetch()){
+        if(isset($row["BellScheduleName"])&&$row["BellScheduleName"]!=null){
+          $row1 = array();
+          $row1[0] = $row["BellScheduleName"];
+          $row1[1] = $row["AlternateName"];
+          $result[] = $row1;
+        }
+      }
+      $stmt->closeCursor();
+      return $result;
+
+     }
+     catch(PDOException $e)
+     {
+       die($e->getMessage());
+       return;
+     }
+     return '[["delete","No School"],["Regular","Regular (M-Th)"],["Friday","Friday"],["Early Dismissal","Early Dism (4:40)"],["Fast Day","Fast Day (1:45)"],["AM Assembly","AM Assembly"],["PM Assembly","PM Assembly"],["Custom","Custom"]]';
+  }
+public function getDayNames(){
+return '[["delete","No Classes"],["M","Monday"],["A","A Day"],["B","B Day"],["C","C Day"],["T","Thursday"],["F","Friday"]]';
+
+}
+
+
   public function getValidSchoolDays($currentMonth){
     $schoolid = 1;
     $sql = "SELECT SchoolDate, DayName, BellScheduleName

@@ -11,7 +11,7 @@ $valid = $schoolCal->validateAdmin();
        //echo "<h2>It is $valid</h2>";
 	if(!$valid){
 		echo "<h2>You must an administrator to edit the School Calendar.</h2>"
-		."<p>Contact <a href = \"mailto:help@yuhsgschedule.com\">help@yuhsgschedule.com</a>"
+		."<p>Contact <a href = \"mailto:help@classperiods.com\">help@classperiods.com</a>"
 		." if you believe this is in error.</p>";
 		include_once("common/footer.php");
 		exit();
@@ -20,7 +20,13 @@ $valid = $schoolCal->validateAdmin();
 		$currentMonth=date('m');
 		echo "<script>var calendarData= ";
 		echo json_encode($schoolCal->getvalidSchoolDays($currentMonth));
-		echo "; </script>";
+		echo ";\n";
+		echo "var classDays = ";
+		echo $schoolCal->getDayNames();
+		echo ";\n";
+		echo "var bellSchedules = ";
+		echo json_encode($schoolCal->getBellScheduleNames());
+		echo "; </script>\n";
 	}
 } 
 else {
@@ -42,8 +48,8 @@ else {
 	var monthOffset = 0;
 	var monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];
 	var dayNames = ["Sun","Monday","Tuesday","Wednesday","Thursday","Friday","Sat"];
-	var classDays = [["delete","No Classes"],["M","Monday"],["A","A Day"],["B","B Day"],["C","C Day"],["T","Thursday"],["F","Friday"]];
-	var bellSchedules = [["delete","No School"],["Regular","Regular (M-Th)"],["Friday","Friday"],["Early Dismissal","Early Dism (4:40)"],["Fast Day","Fast Day (1:45)"],["AM Assembly","AM Assembly"],["PM Assembly","PM Assembly"]];
+	// var classDays = [["delete","No Classes"],["M","Monday"],["A","A Day"],["B","B Day"],["C","C Day"],["T","Thursday"],["F","Friday"]];
+	//var bellSchedules = [["delete","No School"],["Regular","Regular (M-Th)"],["Friday","Friday"],["Early Dismissal","Early Dism (4:40)"],["Fast Day","Fast Day (1:45)"],["AM Assembly","AM Assembly"],["PM Assembly","PM Assembly"]];
 	var classDayNames = "";
 	var bellScheduleNames = "";
 	window.onload = function() {
