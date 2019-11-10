@@ -25,6 +25,7 @@
     float: left;
 }
 #menu li a {
+  font-size:20px;
     display: block;
     color: white;
     text-align: center;

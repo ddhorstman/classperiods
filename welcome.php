@@ -61,6 +61,7 @@
         text-align: center;
     }
     #school-list a {
+        margin: 10px;
         text-decoration:none;
         color: inherit;
         font-size:25px;
