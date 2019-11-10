@@ -2,6 +2,5 @@ vendor
 vendor/**
 composer*
 common/inc/constants.inc.php
-calendar.php
 *.sql
 id_rsa_DDH
