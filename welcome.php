@@ -53,12 +53,37 @@ try {
 echo "var participatingSchools = ".$schools.";\n";
 ?>
 window.onload = function(){
-    alert("Hello");
+    var section = document.getElementById("school-list");
+    for(let i = 0; i < participatingSchools.length; i++){
+        var currentSchool = participatingSchools[i];
+        var schoolDiv = document.createElement("div");
+        var logo = document.createElement("img");
+        logo.src = currentSchool.image;
+        schoolDiv.appendChild(logo);
+
+
+        section.appendChild(schoolDiv);
+    }
 }
 </script>
-
 <body>
-Splash screen in development!<br>
+<header>
+    <h1>ClassPeriods</h1>
+    <p>ClassPeriods is a schedule management app that makes it easy for students
+       and faculty to keep track of their schedules. It supports rotating and block
+       schedules, half days, custom event schedules, and more!
+    </p>
+</header>
+<section class = "information">
+    <h2>Particpating schools</h2>
+    <p>If your school has signed up, you can find a link to your school's schedule
+       page below. If you want to sign up for the service, contact
+       <a href="mailto:sales@classperiods.com">sales@classperiods.com</a>
+       for more information.</p>
+</section>
+<section id="school-list">
+</section>
+       
 You can view the <a href="https://yuhsg.classperiods.com">YUHSG</a> schedule page.
 </body>
 </html>
