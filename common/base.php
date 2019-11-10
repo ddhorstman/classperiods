@@ -15,8 +15,9 @@
         $dsn = "mysql:host=".DB_HOST.";dbname=".DB_NAME;
         $db = new PDO($dsn, DB_USER, DB_PASS);
     } catch (PDOException $e) {
-        include_once "splash_screen.php";
+        echo '<meta http-equiv="refresh" content="0;URL=https://www.classperiods.com/welcome.php">';
+        echo '</head><body></body></html>';
         //echo 'Connection failed: ' . $e->getMessage();
-        exit;
+        exit();
     }
 ?>
