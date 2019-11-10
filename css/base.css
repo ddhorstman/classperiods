@@ -16,7 +16,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	/* font: inherit; */
-	vertical-align: baseline;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -42,32 +43,57 @@ body {
   margin: 0px;
 }
 
-#menu ul {
+.menu ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    height: 56px;
     overflow: hidden;
     background-color: var(--filled-color);
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
-#menu li {
+/* .menu li {
     float: left;
-}
-#menu li a {
-  font-size:20px;
-    display: block;
+} */
+.menu li a {
+   font-size:20px;
     color: white;
     text-align: center;
-padding-top:16px;
-padding-bottom:16px;
+    margin: auto 0px;
+    padding:16px 16px;
     text-decoration: none;
+    vertical-align: middle;
+    height:56px;
+    display:flex;
+    align-items:center;
 }
-#menu li a:hover {
+.menu li a:hover {
     background-color: var(--class-added-color);
 }
 #nolink {
   cursor:default;
   background-color: var(--filled-color);
 }
+#home-button {
+  padding: 16px 8px;
+  display:flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#home-button img {
+  height: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
+  vertical-align: middle;
+}
+#home-button span {
+  vertical-align: middle;
+  height:30px;
+  margin: auto 0px;
+}
+
 .main-content{
 /* Will affect everything below titlebar on all pages.*/
 }

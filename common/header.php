@@ -24,14 +24,13 @@
 ?>
 <!-- onclick="toggleClass(theToggle, 'on'); >
 <a href="#menu" id="toggle" "><span></span></a-->
-<style> #menu li a {padding:16px;}</style>
-<div id="menu">
+<div class="menu">
   <ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="input_schedule.php">Class schedule</a></li>
-    <li><a href="add_calendar.php">View in Google Calendar</a></li>
+    <li><a id="home-button" href="index.php"><img src="/icon_ring.png"><span>Home</span></a></li>
+    <li><a href="input_schedule.php"><span>Class schedule</span></a></li>
+    <li><a href="add_calendar.php"><span>View in Google Calendar</span></a></li>
       <?php if(isset($_SESSION['IsAdmin'])&&$_SESSION['IsAdmin']==1){
-      echo "<li><a href = \"admin.php\">Admin panel</a></li>";
+      echo "<li><a href = \"admin.php\"><span>Admin panel</span></a></li>";
     } ?>
     <li><a href="logout.php">Log out <?php /*echo "(".$_SESSION['Username'].")";*/?></a></li>
   </ul>
