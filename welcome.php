@@ -6,6 +6,35 @@
       href="favicon.png">
     <title>ClassPeriods | Welcome</title>
 </head>
+<style>
+    a {
+        text-decoration:none;
+        color: inherit;
+    }
+    #school-list{
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    #school-list a {
+        width: 380px;
+        border: 2px solid blue;
+        border-radius: 10px;
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #school-list a img {
+        padding: 10px;
+        width:48%;
+    }
+    #school-list a h3{
+        width:48%;
+    }
+
+</style>
 <script>
 <?php
 
@@ -87,7 +116,5 @@ window.onload = function(){
 </section>
 <section id="school-list">
 </section>
-       
-You can view the <a href="https://yuhsg.classperiods.com">YUHSG</a> schedule page.
 </body>
 </html>
