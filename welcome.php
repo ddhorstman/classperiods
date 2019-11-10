@@ -153,7 +153,7 @@ window.onload = function(){
         <img src="https://www.classperiods.com/icon_ring.png">
      <h1>ClassPeriods</h1>
 </header>
-<section class = "information">
+<section class = "information main-content">
     <section class = "basic-information">
     <h2>About ClassPeriods</h2>
     <p>ClassPeriods is a schedule management app that makes it easy for students
@@ -162,7 +162,7 @@ window.onload = function(){
     </p>
     </section>
     <section class = "schools-list">
-    <h2>Particpating schools</h2>
+    <h2>Particpating Schools</h2>
     <p>If your school has signed up, you can find a link to your school's schedule
        page below. If you want to sign up for the service, contact
        <a href="mailto:sales@classperiods.com">sales@classperiods.com</a>

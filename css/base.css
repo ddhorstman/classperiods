@@ -1,8 +1,38 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* font: inherit; */
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
 * {
   --header-color: rgb(128,156,101);
-  --filled-color: #51646b;
+  --filled-color-old: hsl(196, 14%, 37%);
+  --filled-color:hsl(196, 32%, 21%);
   --empty-color: #d3d8da;
-  --class-added-color: #3d4b50;
+  --class-added-color-old: hsl(196, 13%, 28%);
+  --extra-dark-filled-color-old: hsl(193, 13%, 19%);
+  --class-added-color: hsl(229, 32%, 15%);
+  --extra-dark-filled-color: #121523;
   --class-deleted-color: #edf0f0;
   font-family: 'Zilla Slab', serif;
 
@@ -11,102 +41,35 @@ body {
   font-size:20px;
   margin: 0px;
 }
-/* html {
-  font: 1.1em/1.4 Helvetica, sans-serif;
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--filled-color);
 }
-
-
-.wrapper {
-  border: 5px solid rgb(86,98,110);
-  border-radius: 5px;
-  margin-bottom: 2em;
+#menu li {
+    float: left;
 }
-
-.wrapper > div {
-  background-color: rgb(89,161,175);
-  border-radius: 5px;
-  padding: 10px;
-  color: #fff;
-  font-weight: bold;
-}
-
-.multicol {
-  column-width: 250px;
-  column-gap: 20px;
-  padding: 10px;
-}
-
-.multicol p {
-  margin: 0 0 1em 0;
-}
-
-.flex {
-   display: flex;
-  flex-wrap: wrap;
-}
-
-.flex > * {
-  flex: 1 1 250px;
-  margin: 10px;
-}
-
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
+#menu li a {
+  font-size:20px;
     display: block;
-  }
+    color: white;
+    text-align: center;
+padding-top:16px;
+padding-bottom:16px;
+    text-decoration: none;
 }
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+#menu li a:hover {
+    background-color: var(--class-added-color);
 }
- */
+#nolink {
+  cursor:default;
+  background-color: var(--filled-color);
+}
+.main-content{
+/* Will affect everything below titlebar on all pages.*/
+}
 
 

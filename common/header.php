@@ -13,34 +13,6 @@
     <!-- Icon courtesy of "schedule" by Markus from the Noun Project -->
     <!-- https://thenounproject.com/hrsaxa/collection/calendar-search-bell-currency-microphone/?i=1776647 -->
      <!--meta name="google-signin-client_id" content="619981127021-appbft15od7mttn34vpsp7eimeuc5k0b.apps.googleusercontent.com"></meta-->
-     <style>
-#menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #243d46;
-}
-#menu li {
-    float: left;
-}
-#menu li a {
-  font-size:20px;
-    display: block;
-    color: white;
-    text-align: center;
-padding-top:16px;
-padding-bottom:16px;
-    text-decoration: none;
-}
-#menu li a:hover {
-    background-color: #121523;
-}
-#nolink {
-  cursor:default;
-  background-color:#243d46;
-}
-</style>
 </head>
 <body>
     <div id="page-wrap">

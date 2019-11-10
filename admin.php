@@ -36,12 +36,14 @@ else {
 }
 
 ?>
+<div class="main-content">
 <h3>School Calendar</h3>
 <div id = "calendarWrapper">
 	<div id = "calendarMonth">Loading...</div>
 	<!--div id = "loadingMessage">Loading calendar...</div-->
 	<table id="calendarView"></table></div>
 	<div id = "statusMessage"></div>
+</div>
 </div>
 <script>
 	var date = new Date();

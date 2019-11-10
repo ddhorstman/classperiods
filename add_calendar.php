@@ -9,8 +9,31 @@
        // $extID=$_SESSION['Username'];
 ?>
    <style>
-   h3 + ol {
+   /* h3 + ol {
     margin-top:-10px;
+   } */
+   #calendar-instructions {
+    list-style: decimal inside;
+   }
+   #calendar-instructions li {
+       margin: 5px 0px;
+   }
+   .calendar-main {
+    width:95%;
+    margin: 10px auto;
+   }
+   /* input {
+       display:none;
+    } */
+   button {
+       background-color: var(--class-added-color);
+       color:white;
+       border-radius: 5px;
+       border-color: var(--filled-color);
+   }
+   .warning-message {
+       color:red;
+       margin-bottom: 1em;
    }
 .tooltip {
     position: relative;
@@ -19,7 +42,7 @@
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
-    background-color: #555;
+    background-color: var(--filled-color);
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -40,7 +63,7 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: var(--filled-color) transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {
     visibility: visible;
@@ -63,11 +86,12 @@ function outFunc() {
 </script>
  
         <!--big><b>Follow the directions below to add your classes to Google Calendar:</big></b><br-->
-<div style="color:red;">
+    <div class="main-content calendar-main">
+        <div class="warning-message">
         Note: Your calendar will update automatically, but it may take up to 48 hours for changes to appear in Google Calendar.
-</div>
+        </div>
       <h3>Instructions:</h3>
-        <ol id = "calendarInstructions">
+        <ol id = "calendar-instructions">
             <li>Copy this calendar link to your clipboard: 
                 <input onfocus="this.select();" type="text" value="<?php 
                 echo "https://".$_SERVER['HTTP_HOST']."/calendar.php?extID=".$extID; 
@@ -81,9 +105,10 @@ function outFunc() {
             <li>Go to the "<a href="https://calendar.google.com/calendar/r/settings/addbyurl" target="_blank">Add calendar by URL</a>" page in Google Calendar.</li>
             <li>Find the "URL of calendar" box and paste in the link.</li>
             <li>Click on "Add calendar".</li>
-            <li>You're done! You can change the name by clicking on "Class Schedule" in the sidebar.</li>
+            <li>You're done! You can change the name by clicking on the calendar in the sidebar.</li>
             
         </ol>
+</div>
 <?php
     else:
 ?>

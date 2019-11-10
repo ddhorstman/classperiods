@@ -39,20 +39,14 @@ $schedule = new ClassScheduleItems($db);
 ?>
 <div id = "main">
 <style>
-:root {
-	--header-color: rgb(128,156,101);
-	--filled-color: #51646b;
-	--empty-color: #d3d8da;
-	--class-added-color: #3d4b50;
-	--class-deleted-color: #edf0f0;
-}
 input{
 	border-style: none;
 	text-align:center;
 	background-color: var(--empty-color);
 	color:white;
-	/* font-family: 'Open Sans',sans-serif; */
-	    font-size: 1.1em/1.4; /*Helvetica, sans-serif; */
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
 }
 table, th, td {
 	color:white;
@@ -72,6 +66,7 @@ background-color: var(--empty-color);
 <body>
     <div>  
 <!--b><big>Input your class schedule below:</big></b><br-->
+<div class="main-content">
 <div id="message">
 <?php 
 if(isset($_GET['new'])&&$_GET['new']==1){
@@ -80,7 +75,6 @@ if(isset($_GET['new'])&&$_GET['new']==1){
 ?>
 To get started, click on a box and start typing.</div>
 <!--div style="color:red;">To delete a class, type "delete" in its timeslot.</div-->
-</div>
 <form method = "post" action = "input_schedule.php" id = "input_schedule" autocomplete="off">
 <table id = "classSchedule">
 	
@@ -122,7 +116,7 @@ To get started, click on a box and start typing.</div>
 		  if(isset($classes[$row[$i]])){
 		  	echo "style = \"background-color: var(--filled-color);\"";
 		  }
-		  echo "><input type=\"text\" oninput=\"setColorActive(this.id)\" onblur=\"updateClass(this.id,this.value)\" maxlength=\"$length\" size = \"$length\" autocomplete= \"school-class\" name=\"$row[$i]\" id=\"$row[$i]\"";
+		  echo "><input type=\"text\" oninput=\"setColorActive(this.id)\" onblur=\"updateClass(this.id,this.value)\" maxlength=\"$length\" size = \"".($length-4)."\" autocomplete= \"school-class\" name=\"$row[$i]\" id=\"$row[$i]\"";
 		    if(isset($classes[$row[$i]])){
 		        //remove quotation marks to prevent html code injection
 		        $holdClassName = str_replace("\"","",$classes[$row[$i]]);
@@ -208,6 +202,7 @@ To get started, click on a box and start typing.</div>
 	</script>
 <!--input type="submit" name = "submit_table" id = "submit_table" value = "Submit"/-->
 </form>
+	</div>
 	</div>
 	<?php 
 	    endif;
