@@ -63,7 +63,18 @@ padding-bottom:16px;
     <li><a href="logout.php">Log out <?php /*echo "(".$_SESSION['Username'].")";*/?></a></li>
   </ul>
 </div>
-<?php else:  ?>
+<?php else:  
+    if(SUBDOMAIN!='demo'&&SUBDOMAIN!='testing'){
+      $filepath =  explode("/",$_SERVER['SCRIPT_FILENAME']);
+      $filename = $filepath[count($filepath)-1];
+      if($filename!="gauth.php"){
+          echo '<meta http-equiv="refresh" content="0;URL=https://'.SUBDOMAIN.'.classperiods.com/gauth.php">';
+        exit();
+      }
+    }
+  
+  
+  ?>
 <div id="menu">
   <ul>
     <li>
