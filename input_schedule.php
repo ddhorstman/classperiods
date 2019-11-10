@@ -51,8 +51,8 @@ input{
 	text-align:center;
 	background-color: var(--empty-color);
 	color:white;
-	font-family: 'Open Sans',sans-serif;
-	    font: 1.1em/1.4 Helvetica, sans-serif;
+	/* font-family: 'Open Sans',sans-serif; */
+	    font-size: 1.1em/1.4; /*Helvetica, sans-serif; */
 }
 table, th, td {
 	color:white;

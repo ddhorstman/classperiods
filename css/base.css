@@ -1,4 +1,16 @@
-html {
+* {
+  --header-color: rgb(128,156,101);
+  --filled-color: #51646b;
+  --empty-color: #d3d8da;
+  --class-added-color: #3d4b50;
+  --class-deleted-color: #edf0f0;
+  font-family: 'Zilla Slab', serif;
+
+}
+body {
+  margin: 0px;
+}
+/* html {
   font: 1.1em/1.4 Helvetica, sans-serif;
 }
 
@@ -94,6 +106,6 @@ body {
     text-align: left;
   }
 }
-
+ */
 
 

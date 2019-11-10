@@ -273,13 +273,6 @@ function setCellData(_targetCell,_targetData,_dataValue, _changeColor=0){
 		}
 </script>
 <style>
-	:root {
-		--header-color: rgb(128,156,101);
-		--filled-color: #51646b;
-		--empty-color: #d3d8da;
-		--class-added-color: #3d4b50;
-		--class-deleted-color: #edf0f0;
-	}
 	span{
 		display: inline-block;
 		text-align: center;
@@ -291,8 +284,7 @@ function setCellData(_targetCell,_targetData,_dataValue, _changeColor=0){
 		vertical-align: top;
 		background-color: var(--empty-color);
 		color:white;
-		font-family: 'Open Sans',sans-serif;
-		font: 1.1em/1.4 Helvetica, sans-serif;
+		font-size 1.1em/1.4;
 	}
 	table, th, td {
 		color:white;
