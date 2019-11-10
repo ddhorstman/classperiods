@@ -56,11 +56,15 @@ window.onload = function(){
     var section = document.getElementById("school-list");
     for(let i = 0; i < participatingSchools.length; i++){
         var currentSchool = participatingSchools[i];
-        var schoolDiv = document.createElement("div");
+        var schoolDiv = document.createElement("a");
+        schoolDiv.href=currentSchool.url;
         var logo = document.createElement("img");
         logo.src = currentSchool.image;
         schoolDiv.appendChild(logo);
-
+        var schoolName = document.createElement("h3");
+        var name = document.createTextNode(currentSchool.name);
+        schoolName.appendChild(name);
+        schoolDiv.appendChild(schoolName);
 
         section.appendChild(schoolDiv);
     }
