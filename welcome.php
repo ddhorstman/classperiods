@@ -31,6 +31,7 @@
         width:48%;
     }
     #school-list a h3{
+        padding:10px;
         width:48%;
     }
 

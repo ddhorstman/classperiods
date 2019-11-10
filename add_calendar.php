@@ -70,7 +70,7 @@ function outFunc() {
         <ol id = "calendarInstructions">
             <li>Copy this calendar link to your clipboard: 
                 <input onfocus="this.select();" type="text" value="<?php 
-                echo "https://www.yuhsgschedule.com/calendar.php?extID=".$extID; 
+                echo "https://".$_SERVER['HTTP_HOST']."/calendar.php?extID=".$extID; 
                 ?>" id="calendarURL">
                     <div class="tooltip">
                     <button onclick="copyLink()" onmouseout="outFunc()">
