@@ -47,7 +47,7 @@
   
   
   ?>
-<div id="menu">
+<div class="menu">
   <ul>
     <li>
       <img src="common/login_icons/signin_normal.png" 

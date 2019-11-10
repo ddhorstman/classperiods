@@ -26,17 +26,31 @@ footer, header, hgroup, menu, nav, section {
 }
 
 * {
-  --header-color: rgb(128,156,101);
+  font-family: 'Zilla Slab', serif;
+  --header-color: hsl(90, 22%, 50%);
+  --header-color-unselected: hsl(90, 36%, 89%);
+  --emphasis-color:hsl(41, 78%, 59%);
+  --emphasis-color-unselected: hsl(41, 77%, 88%);
+  --emphasis-color-saturated: hsl(24, 99%, 59%);
+
+  --main-color: hsl(196, 32%, 15%);
+  --main-color-unselected: hsl(196, 9%, 37%);
+  --main-color-saturated: hsl(197, 34%, 21%);
+  --main-color-lighten: hsl(196, 9%, 84%);
+  --main-color-lighten-more: hsl(196, 9%, 94%);
+
+  --class-added-color: hsl(196, 32%, 15%);
+  --extra-dark-filled-color:hsl(197, 34%, 21%);
+  --filled-color:hsl(196, 9%, 37%);
+  --empty-color: hsl(196, 9%, 84%);
+  --class-deleted-color: hsl(196, 9%, 94%);
+
+
+
+
   --filled-color-old: hsl(196, 14%, 37%);
-  --filled-color:hsl(196, 32%, 21%);
-  --empty-color: #d3d8da;
   --class-added-color-old: hsl(196, 13%, 28%);
   --extra-dark-filled-color-old: hsl(193, 13%, 19%);
-  --class-added-color: hsl(229, 32%, 15%);
-  --extra-dark-filled-color: #121523;
-  --class-deleted-color: #edf0f0;
-  font-family: 'Zilla Slab', serif;
-
 }
 body {
   font-size:20px;
@@ -78,9 +92,6 @@ body {
 }
 #home-button {
   padding: 16px 8px;
-  display:flex;
-  flex-flow: row nowrap;
-  align-items: center;
 }
 #home-button img {
   height: 30px;

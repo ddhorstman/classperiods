@@ -177,7 +177,7 @@ function buildCalendar(year,month){
 	//document.getElementById("loadingMessage").innerHTML="";
 	document.getElementById('calendarMonth').innerHTML="<button style=\"padding: 0;border: none;background: none;\" onclick=\"prevDate()\"><img style=\"width: 15px;height: 20px;\" src=\"js/assets/arrow_left.png\" alt=\"←\"></button><span>"+
 	monthNames[month]+" "+year+
-	"</span><button style=\"padding: 0;border: none;background: none;\" onclick=\"nextDate()\"><img style=\"width: 15px;height: 20px;\" src=\"js/assets/arrow_right.png\" alt=\"→\"></button>";
+	"</span class=\"admin-span\"><button style=\"padding: 0;border: none;background: none;\" onclick=\"nextDate()\"><img style=\"width: 15px;height: 20px;\" src=\"js/assets/arrow_right.png\" alt=\"→\"></button>";
 	var calendarView = document.getElementById('calendarView');
 	calendarView.innerHTML="";
 	var daysInMonth = new Date(year, month+1, 0).getDate();
@@ -275,7 +275,7 @@ function setCellData(_targetCell,_targetData,_dataValue, _changeColor=0){
 		}
 </script>
 <style>
-	span{
+	.admin-span{
 		display: inline-block;
 		text-align: center;
 		width: 150px;
