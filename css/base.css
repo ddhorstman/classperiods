@@ -52,11 +52,14 @@ footer, header, hgroup, menu, nav, section {
   --class-added-color-old: hsl(196, 13%, 28%);
   --extra-dark-filled-color-old: hsl(193, 13%, 19%);
 }
+
 body {
   font-size:20px;
   margin: 0px;
 }
-
+a {
+  color: var(--header-color);
+}
 .menu ul {
     list-style-type: none;
     margin: 0px;
