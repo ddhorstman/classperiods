@@ -38,7 +38,7 @@ footer, header, hgroup, menu, nav, section {
   --main-color-saturated: hsl(197, 34%, 21%);
   --main-color-lighten: hsl(196, 9%, 84%);
   --main-color-lighten-more: hsl(196, 9%, 94%);
-
+/*Duplicate colors - refactor code then remove.*/
   --class-added-color: hsl(196, 32%, 15%);
   --extra-dark-filled-color:hsl(197, 34%, 21%);
   --filled-color:hsl(196, 9%, 37%);
@@ -47,7 +47,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 
-
+/* Deprecated colors. Here for the memories.*/
   --filled-color-old: hsl(196, 14%, 37%);
   --class-added-color-old: hsl(196, 13%, 28%);
   --extra-dark-filled-color-old: hsl(193, 13%, 19%);
