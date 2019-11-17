@@ -42,7 +42,7 @@ $schedule = new ClassScheduleItems($db);
 input{
 	border-style: none;
 	text-align:center;
-	background-color: var(--empty-color);
+	background-color: var(--main-color-lighten);
 	color:white;
 	margin: 0px;
 	padding: 0px;
@@ -59,7 +59,7 @@ th{
 	/*background-color: #121523;*/
 }
  td {
-background-color: var(--empty-color);
+background-color: var(--main-color-lighten);
     padding: 5px;
 }
 </style>
@@ -114,14 +114,14 @@ To get started, click on a box and start typing.</div>
 		for($i=0;$i<count($row);$i++){
 		  echo "<td id=\"$row[$i]Cell\"";
 		  if(isset($classes[$row[$i]])){
-		  	echo "style = \"background-color: var(--filled-color);\"";
+		  	echo "style = \"background-color: var(--main-color-unselected);\"";
 		  }
 		  echo "><input type=\"text\" oninput=\"setColorActive(this.id)\" onblur=\"updateClass(this.id,this.value)\" maxlength=\"$length\" size = \"".($length-4)."\" autocomplete= \"school-class\" name=\"$row[$i]\" id=\"$row[$i]\"";
 		    if(isset($classes[$row[$i]])){
 		        //remove quotation marks to prevent html code injection
 		        $holdClassName = str_replace("\"","",$classes[$row[$i]]);
 		        echo "value = \"$holdClassName\"";
-		        echo "style = \"background-color: var(--filled-color);\"";
+		        echo "style = \"background-color: var(--main-color-unselected);\"";
 		    }
 		    // else if($row[$i]=="T10"){
 		    // 	echo "value = \"Plus Period\"";
@@ -149,12 +149,12 @@ To get started, click on a box and start typing.</div>
 			function setColorActive(Period){
 				Name = document.getElementById(Period.toString()).value.toString();
 			    if(Name.toString()==''){
-			       document.getElementById(Period.toString()).style.background="var(--empty-color)";
-			 document.getElementById(Period.toString()+"Cell").style.background="var(--empty-color)"; 
+			       document.getElementById(Period.toString()).style.background="var(--main-color-lighten)";
+			 document.getElementById(Period.toString()+"Cell").style.background="var(--main-color-lighten)"; 
 			    }
 			    else{
-			 document.getElementById(Period.toString()).style.background="var(--filled-color)";
-			 document.getElementById(Period.toString()+"Cell").style.background="var(--filled-color)";
+			 document.getElementById(Period.toString()).style.background="var(--main-color-unselected)";
+			 document.getElementById(Period.toString()+"Cell").style.background="var(--main-color-unselected)";
 			    }
 			}
 			function updateClass(Period,Name){
@@ -174,15 +174,15 @@ To get started, click on a box and start typing.</div>
 				http.onreadystatechange = function() {//Call a function when the state changes.
 				    if(http.readyState == 4 && http.status == 200) {
 				        document.getElementById("message").innerHTML="Schedule updated!";
-			       document.getElementById(Period.toString()).style.background="var(--class-added-color)";
-			 		document.getElementById(Period.toString()+"Cell").style.background="var(--class-added-color)"; 
+			       document.getElementById(Period.toString()).style.background="var(--main-color)";
+			 		document.getElementById(Period.toString()+"Cell").style.background="var(--main-color)"; 
 				        // document.getElementById(Period.toString()).style.background="#121523";
 				        // document.getElementById(Period.toString()+"Cell").style.background="#121523";
 				        if(this.responseText.toString().includes("Delete")){
 				        	hasUsedDeleteBefore=true;
 				        	document.getElementById(Period.toString()).value="";
-				        	document.getElementById(Period.toString()).style.background="var(--class-deleted-color)";
-				        	document.getElementById(Period.toString()+"Cell").style.background="var(--class-deleted-color)";
+				        	document.getElementById(Period.toString()).style.background="var(--main-color-lighten-more)";
+				        	document.getElementById(Period.toString()+"Cell").style.background="var(--main-color-lighten-more)";
 				        }
 				    }
 				}

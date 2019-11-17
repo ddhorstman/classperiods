@@ -104,17 +104,17 @@ function updateSchoolDay(_date,_classes,_bells,_cell){
     	receivedData=receivedData.substring(receivedData.indexOf(identifier)+identifier.length);
     	document.getElementById("statusMessage").innerHTML=receivedData;
     	if(_bells==="delete"){
-    	_cell.style.background="var(--class-deleted-color)";
+    	_cell.style.background="var(--main-color-lighten-more)";
     	}
     	else {
-    	_cell.style.background="var(--class-added-color)";
+    	_cell.style.background="var(--main-color)";
     	}
     	setTimeout(function(){ document.getElementById("statusMessage").innerHTML="";},3000);
     	if(this.responseText.includes("elete")){
-    		setTimeout(function(){_cell.style.background="var(--empty-color)";},1000);
+    		setTimeout(function(){_cell.style.background="var(--main-color-lighten)";},1000);
     	}
     	else{
-    		setTimeout(function(){_cell.style.background="var(--filled-color)";},1000);
+    		setTimeout(function(){_cell.style.background="var(--main-color-unselected)";},1000);
     	}
     }
   };
@@ -242,7 +242,7 @@ function buildCalendar(year,month){
 		if(targetCell!=null){
 			setCellData(targetCell,'classDaySelect',calendarData[g]["Classes"]);
 			setCellData(targetCell,'bellScheduleSelect',calendarData[g]["Bells"]);
-			targetCell.setAttribute("style","background-color:var(--filled-color);")
+			targetCell.setAttribute("style","background-color:var(--main-color-unselected);")
 		}
 	}
 }
@@ -284,7 +284,7 @@ function setCellData(_targetCell,_targetData,_dataValue, _changeColor=0){
 		border-style: none;
 		text-align:center;
 		vertical-align: top;
-		background-color: var(--empty-color);
+		background-color: var(--main-color-lighten);
 		color:white;
 		font-size 1.1em/1.4;
 	}
@@ -299,7 +299,7 @@ function setCellData(_targetCell,_targetData,_dataValue, _changeColor=0){
 		/*background-color: #121523;*/
 	}
 	td {
-		background-color: var(--empty-color);
+		background-color: var(--main-color-lighten);
 		padding: 5px;
 		text-align: right;
 		vertical-align: top;

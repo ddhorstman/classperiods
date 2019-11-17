@@ -38,13 +38,13 @@ footer, header, hgroup, menu, nav, section {
   --main-color-saturated: hsl(197, 34%, 21%);
   --main-color-lighten: hsl(196, 9%, 84%);
   --main-color-lighten-more: hsl(196, 9%, 94%);
-/*Duplicate colors - refactor code then remove.*/
+/*Duplicate colors - refactor code then remove.
   --class-added-color: hsl(196, 32%, 15%);
   --extra-dark-filled-color:hsl(197, 34%, 21%);
   --filled-color:hsl(196, 9%, 37%);
   --empty-color: hsl(196, 9%, 84%);
   --class-deleted-color: hsl(196, 9%, 94%);
-
+*/
 
 
 /* Deprecated colors. Here for the memories.*/
@@ -66,7 +66,7 @@ a {
     padding: 0px;
     height: 56px;
     overflow: hidden;
-    background-color: var(--filled-color);
+    background-color: var(--main-color-saturated);
     display:flex;
     flex-flow: row wrap;
     align-items: center;
@@ -87,11 +87,11 @@ a {
     align-items:center;
 }
 .menu li a:hover {
-    background-color: var(--class-added-color);
+    background-color: var(--main-color);
 }
 #nolink {
   cursor:default;
-  background-color: var(--filled-color);
+  background-color: var(--main-color-unselected);
 }
 #home-button {
   padding: 16px 8px;
