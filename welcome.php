@@ -10,8 +10,8 @@
 </head>
 <style>
     body {
-        background-color: var(--empty-color);
-        color: var(--class-added-color);
+        background-color: var(--main-color-lighten);
+        color: var(--main-color);
     }
     p {
         font-size: 20px;
@@ -31,7 +31,7 @@
 	width:100%;
 	z-index: 10;
         color: white;
-        background-color: var(--class-added-color);
+        background-color: var(--main-color);
         padding: 10px 20px;
     }
     .logo-display {
@@ -72,7 +72,7 @@
         flex-flow: row nowrap;
         justify-content: space-evenly;
         align-items: center;
-        background-color: var(--class-deleted-color);
+        background-color: var(--main-color-lighten-more);
     }
     #school-list a img {
         padding: 10px;
