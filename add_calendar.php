@@ -26,10 +26,10 @@
        display:none;
     } */
    button {
-       background-color: var(--class-added-color);
+       background-color: var(--main-color);
        color:white;
        border-radius: 5px;
-       border-color: var(--filled-color);
+       border-color: var(--main-color-unselected);
    }
    .warning-message {
        color:red;
@@ -42,7 +42,7 @@
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
-    background-color: var(--filled-color);
+    background-color: var(--main-color-unselected);
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -63,7 +63,7 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--filled-color) transparent transparent transparent;
+    border-color: var(--main-color-unselected) transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {
     visibility: visible;
