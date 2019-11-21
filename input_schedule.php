@@ -116,7 +116,7 @@ To get started, click on a box and start typing.</div>
 		  if(isset($classes[$row[$i]])){
 		  	echo "style = \"background-color: var(--main-color-unselected);\"";
 		  }
-		  echo "><input type=\"text\" oninput=\"setColorActive(this.id)\" onblur=\"updateClass(this.id,this.value)\" maxlength=\"$length\" size = \"".($length-4)."\" autocomplete= \"school-class\" name=\"$row[$i]\" id=\"$row[$i]\"";
+		  echo "><input type=\"text\" oninput=\"setColorActive(this.id)\" onblur=\"updateClass(this.id,this.value)\" maxlength=\"$length\" size = \"".($length-3)."\" autocomplete= \"school-class\" name=\"$row[$i]\" id=\"$row[$i]\"";
 		    if(isset($classes[$row[$i]])){
 		        //remove quotation marks to prevent html code injection
 		        $holdClassName = str_replace("\"","",$classes[$row[$i]]);
