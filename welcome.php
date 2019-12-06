@@ -6,7 +6,7 @@
     <link rel="icon" 
       type="image/png" 
       href="favicon.png">
-    <title>ClassPeriods | Welcome</title>
+    <title>ClassPeriods</title>
 </head>
 <style>
     body {
